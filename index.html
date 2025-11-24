@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TF-IDF Text Summarizer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>📄 TF-IDF Text Summarizer</h1>
+    <p class="subtitle">Paste your text and get an extractive summary using NLP.</p>
+
+    <label><b>Input Text</b></label>
+    <textarea id="inputText" placeholder="Paste your text here..."></textarea>
+
+    <div class="controls">
+        <div>
+            <label>Summary length (sentences):</label>
+            <select id="numSentences">
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+            </select>
+        </div>
+
+        <button id="summarizeBtn">Summarize</button>
+    </div>
+
+    <div id="status"></div>
+
+    <h2>🧠 Summary:</h2>
+    <div id="summaryBox"></div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
